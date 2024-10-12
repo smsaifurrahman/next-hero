@@ -1,9 +1,11 @@
+import Link from 'next/link';
 import React from 'react';
 
 const AboutContents = () => {
     return (
-        <div>
-            About contents all here
+        <div className="flex-col space-y-4">
+           <Link href="/about/history" >History</Link>
+           <Link href="/about/mission" >Mission</Link>
         </div>
     );
 };

@@ -20,10 +20,14 @@ const Navbar = () => {
             title: "Contacts",
             path: '/contacts'
         },
+        {
+            title: "Blogs",
+            path: '/blogs'
+        },
     ]
 
     const handler = () => {
-        router.push('/services')
+        router.push('/login')
     }
    return (
       <nav className="bg-red-500 px-6 py-4 flex justify-between items-center">
@@ -33,7 +37,7 @@ const Navbar = () => {
                 links?.map((link) => <Link className={`${pathName === link.path && "text-cyan-300"}`} key={link.path} href={link.path}> {link.title} </Link>)
              }
          </ul>
-         <button onClick={handler} className= "btn btn-primary bg-green-400 p-4 rounded-2xl">Login</button>
+         <button onClick={handler} className= "btn btn-primary bg-blue-400 p-4 text-white font-bold rounded-2xl">Login</button>
       </nav>
    );
 };
